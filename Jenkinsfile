@@ -32,8 +32,4 @@ pipeline {
     }
 
   }
-  environment {
-    abc = 'pqr'
-    ved = 'test'
-  }
 }
