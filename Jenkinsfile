@@ -11,7 +11,6 @@ pipeline {
       parallel {
         stage('execute how r u') {
           steps {
-            build(job: 'ved test', propagate: true, wait: true, quietPeriod: 2)
             echo 'Hi how are you'
           }
         }
