@@ -11,13 +11,13 @@ pipeline {
       parallel {
         stage('execute how r u') {
           steps {
-            echo 'Hi how are you'
+            sh 'echo "hi how are you?"'
           }
         }
 
         stage('2A') {
           steps {
-            echo 'hi i am the branch of second pipeline'
+            sh 'echo "i am the second option for branch 2"'
           }
         }
 
