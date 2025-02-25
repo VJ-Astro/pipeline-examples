@@ -2,14 +2,36 @@ pipeline {
   agent any
   stages {
     stage('testing') {
-      steps {
-        sh 'echo "Hello world"'
+      parallel {
+        stage('testing') {
+          steps {
+            sh 'echo "Hello world"'
+          }
+        }
+
+        stage('step1') {
+          steps {
+            sh 'echo "this is step 1"'
+          }
+        }
+
       }
     }
 
     stage('Final stage') {
-      steps {
-        sh 'echo "this is my last stage"'
+      parallel {
+        stage('Final stage') {
+          steps {
+            sh 'echo "this is my last stage"'
+          }
+        }
+
+        stage('step2') {
+          steps {
+            sh 'echo "this is step 2"'
+          }
+        }
+
       }
     }
 
