@@ -37,7 +37,7 @@ pipeline {
 
     stage('Add Archive') {
       steps {
-        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
+        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true, allowEmptyArchive: true)
       }
     }
 
